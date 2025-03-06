@@ -1,0 +1,9 @@
+{
+	"name": "adfnsg",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6f6a51d3-d081-4171-b00d-eb91c73ab0d7",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}
