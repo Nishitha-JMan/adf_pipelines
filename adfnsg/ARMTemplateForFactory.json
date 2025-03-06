@@ -123,6 +123,62 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "VIEW",
+						"type": "Script",
+						"dependsOn": [
+							{
+								"activity": "API",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"linkedServiceName": {
+							"referenceName": "LS_ASQL_Dataset",
+							"type": "LinkedServiceReference"
+						},
+						"typeProperties": {
+							"scripts": [
+								{
+									"type": "Query",
+									"text": "select username,email,website from prod.api;"
+								}
+							],
+							"scriptBlockExecutionTimeout": "02:00:00"
+						}
+					},
+					{
+						"name": "Copy data1",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "VIEW",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"enableStaging": false
+						}
 					}
 				],
 				"policy": {
@@ -137,7 +193,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/RestAPI_Data')]",
-				"[concat(variables('factoryId'), '/datasets/ASQL_API')]"
+				"[concat(variables('factoryId'), '/datasets/ASQL_API')]",
+				"[concat(variables('factoryId'), '/linkedServices/LS_ASQL_Dataset')]"
 			]
 		},
 		{
