@@ -813,7 +813,7 @@
 				"type": "AzureSqlTable",
 				"schema": [],
 				"typeProperties": {
-					"schema": "",
+					"schema": "prod",
 					"table": "API"
 				}
 			},
