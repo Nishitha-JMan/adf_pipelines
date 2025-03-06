@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfnsg"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"LS_ABLB_Dataset_connectionString": {
+			"value": ""
+		},
+		"LS_ASQL_Dataset_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "adfservernsg.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "adf"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "nishitha"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "adfservernsg.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "ADFdb"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "nishitha"
+		},
+		"LS_ASQL_Dataset_properties_typeProperties_server": {
+			"value": "adfservernsg.database.windows.net"
+		},
+		"LS_ASQL_Dataset_properties_typeProperties_database": {
+			"value": "ADFdb"
+		},
+		"LS_ASQL_Dataset_properties_typeProperties_userName": {
+			"value": "nishitha"
+		},
+		"LS_REST_DATA_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
