@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "ASQL_DailyData",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ASQL_Dataset",
@@ -14,7 +14,6 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "",
 			"table": {
 				"value": "@dataset().table_name",
 				"type": "Expression"

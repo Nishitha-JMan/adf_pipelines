@@ -1,15 +1,24 @@
 {
-	"name": "ABLB_Dataset",
+	"name": "ABLB_DATA",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ABLB_Dataset",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"file_name": {
+				"type": "String"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
 				"folderPath": "Product_dataset",
 				"container": "datasets"
 			},
@@ -18,6 +27,15 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "Country Code",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			}
+		]
 	}
 }

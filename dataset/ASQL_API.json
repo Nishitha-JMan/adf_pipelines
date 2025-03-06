@@ -1,24 +1,16 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "ASQL_API",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ASQL_Dataset",
 			"type": "LinkedServiceReference"
-		},
-		"parameters": {
-			"table_name": {
-				"type": "String"
-			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "",
-			"table": {
-				"value": "@dataset().table_name",
-				"type": "Expression"
-			}
+			"table": "API"
 		}
 	}
 }
