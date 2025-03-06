@@ -1,0 +1,23 @@
+{
+	"name": "ABLB_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_Dataset",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Daily_details",
+				"container": "datasets"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
