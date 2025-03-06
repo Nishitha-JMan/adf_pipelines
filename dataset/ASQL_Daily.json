@@ -1,24 +1,16 @@
 {
-	"name": "ASQL_DailyData",
+	"name": "ASQL_Daily",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ASQL_Dataset",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"table_name": {
-				"type": "String"
-			}
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "Staging",
-			"table": {
-				"value": "@dataset().table_name",
-				"type": "Expression"
-			}
+			"schema": "",
+			"table": ""
 		}
 	}
 }
